@@ -12,6 +12,6 @@ const filter = (array, fn) => {
   }
   return result;
 };
-ok.rating[0] > 4.5;
+
 const result = filter([1, 2, 3], val => val <= 0);
 console.log(result);
