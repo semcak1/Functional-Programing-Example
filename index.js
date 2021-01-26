@@ -5,31 +5,37 @@ import "./style.css";
 const appDiv = document.getElementById("app");
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
-const FourEach = (arr, fn) => {
-  for (let i = 0; i < arr.length; i++) {
-    fn(arr[i]);
-  }
+const fonk1 = (f, g) => {
+  return x => {
+    console.log(f(g(x)));
+  };
 };
 
-let arr1 = [10, 25, 36, 4, 54, 64, 7, 81];
+// const FourEach = (arr, fn) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     fn(arr[i]);
+//   }
+// };
 
-//verilen dizideki elemanın çift mi ?
-const isEven = number => {
-  if (!(number % 2)) {
-    return console.log(number, "is even");
-  }
-};
+// let arr1 = [10, 25, 36, 4, 54, 64, 7, 81];
 
-//verilen dizideki elemanın karekoku var mı ?
-const hasSquareRoot = number => {
-  const sqr = Math.sqrt(number);
-  if ((sqr * 10) % 10 === 0) {
-    let sqrNum = Math.sqrt(number);
-    return console.log(number, "is squre of", sqrNum);
-  }
-};
+// //verilen dizideki elemanın çift mi ?
+// const isEven = number => {
+//   if (!(number % 2)) {
+//     return console.log(number, "is even");
+//   }
+// };
 
-FourEach(arr1, num => {
-  // isEven(num)
-  hasSquareRoot(num);
-});
+// //verilen dizideki elemanın karekoku var mı ?
+// const hasSquareRoot = number => {
+//   const sqr = Math.sqrt(number);
+//   if ((sqr * 10) % 10 === 0) {
+//     let sqrNum = Math.sqrt(number);
+//     return console.log(number, "is squre of", sqrNum);
+//   }
+// };
+
+// FourEach(arr1, num => {
+//   // isEven(num)
+//   hasSquareRoot(num);
+// });
