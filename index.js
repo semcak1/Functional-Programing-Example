@@ -5,13 +5,17 @@ import "./style.css";
 const appDiv = document.getElementById("app");
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
-const outer = value => {
-  return fn => {
-    typeof fn === "function" && fn(value);
-    console.log(value);
-  };
-};
+// const unary = fn => (fn.length === 1 ? fn : arg => fn(arg));
 
-outer(5)(val => {
-  console.log("Value is ", val);
-});
+// const answ = ["1", "2", "3"].map(unary(parseInt));
+// console.log(answ);
+
+const filter = (array, fn) => {
+  let result = [];
+  for (const value of array) {
+    fn(value) ? result.push(value) : undefined;
+  }
+  return result;
+};ok.rating[0] > 4.5
+const result = filter([1, 2, 3], val => val <= 0);
+console.log(result);
